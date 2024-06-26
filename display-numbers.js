@@ -1,15 +1,18 @@
 function displayNumbers(n) {
+    let results = []
     for (let i = 1; i <= n; i++) {
         if (i % 3 == 0 && i % 4 == 0) {
-            console.log('OKYES')
+            results.push('OKYES ');
         } else if (i % 3 === 0) {
-            console.log('OK')
+            results.push('OK ');
         } else if (i % 4 === 0) {
-            console.log('YES')
+            results.push('YES ');
         } else {
-            console.log(i)
+            results.push(i);
         }
     }
+    return results
 }
 
-displayNumbers(15)
+let output = displayNumbers(15)
+console.log(output.join(' '))
